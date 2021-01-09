@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flash Cards</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap2-toggle.min.css">
+
+        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap2-toggle.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/global.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/flashcard.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    </head>
+    <body>
+        <div id="main-outer">
+            <div id="main-inner">
+                <div class="webheader"></div>
+                <div class="row-fluid">
+                    <div class="span5" style="margin-top:10px;">
+                        <img src="../images/logo_normal.png" alt="logo">
+                    </div>
+                    <div class="span2">
+                        <div id="main-heading">
+                            <div id="history" class="clickable">
+                                Recent History
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div id="main-heading">
+                            <div id="flashcards" style="color: #E12026">
+                                Flash Cards
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3"  style="margin-top:15px;">
+                        <a href="https://chrome.google.com/webstore/detail/we-tranzlate-premium/olmbanehdhngpgkcfjmilomnnbikohbm?authuser=1" target="_blank">
+                            <img src="../images/upgrade.png" alt="upgrade">
+                        </a>
+                    </div>
+                </div>
+                <div class="row-fluid" style="margin-top:20px;">
+                    <h4>Limited to 10</h4>
+                </div>
+                <div class="row-fluid"> <!-- main body -->
+                    <div class="span5"> <!-- list col -->
+                        <table id="cardlist_table" class="table table-striped" style="margin-top:10px;">
+                            <thead>
+                                <tr>
+                                    <th>Word/Phrase List</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="span7"> <!-- flashcard col -->
+                        <div id="row-fluid" class="middle">
+                            <div class="span12">
+                                <table id="card_table" class="table table-striped" style="margin-top:10px;">
+                                    <thead>
+                                        <tr>
+                                            <th id="half">Word/Phrase</th>
+                                            <th id="half">Answer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id="cardText" style="text-align: center;"></td>
+                                            <td id="cardAnswer"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="btn_arrows">
+                                    <button id="prevCard" value="previous" class="btn"><i class="fas fa-arrow-left fa-3x"></i></button>
+                                </div>
+                                <span id="positionIndex">0/0</span>
+                                <div class="btn_arrows">
+                                    <button id="nextCard" value="next" class="btn"><i class="fas fa-arrow-right fa-3x"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end flashcard col -->
+                </div> <!-- end main body -->
+
+                <hr>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <a href="http://www.wetranzlate.com/aboutus.php" target="_blank">FAQ</a> <br>
+                        <a href="mailto:admin@wetranzlate.com" target="_blank">Report Bug</a> <br>
+                        <a href="http://www.wetranzlate.com/privacy.php" target="_blank">Privacy Policy</a> <br>
+                        <a href="http://www.wetranzlate.com/aboutus.php" target="_blank">Contact Us</a>
+                    </div>
+                    <div class="span3 offset3" style="text-align: right;">
+                        <div class="shareicons">
+                            <div class="shareicon"><a href="#" title="Coming Soon"><i class="fab fa-twitter-square"></i></a></div>
+                            <div class="shareicon"><a href="#" title="Coming Soon"><i class="fab fa-instagram"></i></a></div>
+                            <div class="shareicon"><a href="https://facebook.com/wetranzlate" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+                        </div>
+                        <div><a href="https://paypal.me/wetranzlate" target="_blank">Love us? Donate and Support.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="historyfooter">
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../js/flashcards.js"></script>
+    </body>
+</html>

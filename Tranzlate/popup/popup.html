@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <!-- load stylesheets: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/index.html -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap2-toggle.min.css">
+
+        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+        <script type="text/javascript" src="../js/bootstrap2-toggle.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/global.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main-outer">
+            <nav class="topnav">
+                <div id="nav-title">
+                    <div id="nav-title-icon">
+                        <img src="../images/logo_small.png" alt="logo"> 
+                        
+                    </div>
+                </div>
+            </nav>
+            <div id="main-inner">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div id="main-heading">Translate To:</div>
+                    </div>
+                    <div class="span4 offset2" style="text-align: right">
+                        <div class="tooltipx clickable">How it works?
+                            <span class="tooltiptextx tooltipx-right">Highlight the text while holding down the SHIFT key.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span9">
+                        <div id="main-heading">
+                            <!--                        <div id="translated_to" class="clickable"></div>-->
+                            <select id="select_language" class="languagedropdown"></select>
+                            
+                        </div>
+                    </div>
+                    <div class="span2" style="padding-left: 24px;">
+                        <input id="toggle-event" type="checkbox" data-toggle="toggle" data-style="ios" data-onstyle="danger">
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span4 icons">
+                        <div id="recent_translation" class=" clickable">
+                            <img src="../images/history_free_icon.png">
+                        </div>
+                    </div>
+                    <div class="span4 icons">
+                        <div id="flashcards" class=" clickable">
+                            <img src="../images/flashcard_free_icon.png" border="0">
+                        </div>
+                    </div>
+                    <div class="span4 icons">
+                        <div id="donate" class=" clickable">
+                            <img src="../images/donate_icon.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid" style="margin-top: 5px;">
+                    <div class="span4 icons">
+                        <div id="contactus" class=" clickable">
+                            <img src="../images/contactus_icon.png">
+                        </div>
+                    </div>
+                    <div class="span4 icons">
+                        <div id="more" class=" clickable">
+                            <img src="../images/more_icon.png">
+                        </div>
+                    </div>
+                    <div class="span4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+                        <div id="footer">
+                            
+                        </div>
+        </div>
+
+        <!--        <dialog id="languages_add_dialog">
+                    <h3>Select language:</h3>
+                    <div class="content_area">
+                        <label id="language_label" for="select_language"></label>
+                        <select id="select_language" class="languagedropdown"></select>
+                    </div>
+                    <div class="action_buttons">
+                        <button id="languages_add_ok" class="btn btn-success">Save</button>
+                        <button id="languages_add_cancel" class="btn">Cancel</button>
+                    </div>
+                </dialog>-->
+
+        <script type="text/javascript" src="../js/main.js"></script>
+    </body>
+</html>

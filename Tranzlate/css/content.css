@@ -1,0 +1,96 @@
+.btn-success-dialog {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-close-dialog {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-disabled-dialog {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.btn-dialog {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    margin-right:5px;
+}
+
+button {
+    all: initial;
+    * {
+        all: unset;
+    }
+}
+
+dialog {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #C00000;
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    min-width:300px;
+    max-width: 500px;
+    background: #FFF;
+    text-align: center;
+}
+
+dialog > p {
+    padding:0;
+    margin: 0;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+dialog > div {
+    font-size: 13px;
+}
+
+dialog > hr { 
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #C00000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+div#btn_div_dialog {
+    text-align: center;
+}
+
+div#title_div_dialog {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title_dialog {
+    font-weight: bold;
+}
+
+.closebtntranslate {
+    border: 1px solid #C00000;
+}

@@ -1,0 +1,101 @@
+body {
+    width:100%;
+    height:100%;
+}
+
+div#main-outer {
+    background: #FFF;
+    border: 0px;
+}
+
+div#main-inner {
+    width: 1200px; 
+    margin: 0 auto;
+    padding:0px;
+}
+
+#historyfooter {
+    width: 1200px; 
+    height: 55px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding:0px;
+    background-image: url("../images/footer_bg.png");
+    background-repeat: no-repeat;
+}
+
+th#action_btn {
+    width: 20%;
+}
+
+th#half {
+    width: 40%;
+}
+
+table {
+    table-layout: fixed;
+}
+table thead{
+    background-color: #E12026;
+    color: #FFF;
+}
+
+td, th {
+    word-wrap:break-word;
+    border:1px solid #888888;
+}
+
+div#main-heading {
+    margin-top: 25px;
+}
+
+.clickable {
+    text-decoration-line: none;
+}
+
+a{
+    text-decoration: underline;
+}
+
+.hidden {
+    display:none;
+}
+
+.saveDiv {
+    cursor: pointer;
+    width:32px;
+    font-size: 30px;
+    float:left;
+}
+.saveDiv::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.disableSave {
+    cursor: auto;
+}
+
+.shareicons i{
+    font-size: 38px;
+}
+
+.shareicon {
+    float:right;
+    margin-left:10px;
+}
+
+.shareicons {
+    margin-left:150px;
+}
+
+.shareicons::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.shareicons a {
+    color:inherit;
+}

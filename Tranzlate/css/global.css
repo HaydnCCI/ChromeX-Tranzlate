@@ -1,0 +1,122 @@
+div.page-title {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+div.page-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+hr { 
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #C00000;
+    margin: 1em 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    width: 373px;
+    height: 528px;
+    color: #888888;
+}
+
+a{
+    color: #888888;
+}
+
+a:hover {
+    color: #888888;
+}
+
+/**
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/open_sans.woff2') format('woff2');
+}
+**/
+
+/* Tooltip container */
+.tooltipx {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltipx .tooltiptextx, .tooltiptextx-right {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+/*tooltip positio */
+.tooltipx .tooltiptextx {
+    position: absolute;
+    z-index: 10;
+    top: -15px;
+    right: 105%; 
+}
+
+.tooltipx .tooltiptextx-right {
+    position: absolute;
+    z-index: 10;
+    top: -15px;
+    left: 105%; 
+}
+/* Tooltip arrow */
+/*right*/
+.tooltipx .tooltiptextx::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.tooltipx .tooltiptextx-right::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipx:hover .tooltiptextx, .tooltipx:hover .tooltiptextx-right {
+    visibility: visible;
+    opacity: 1;
+}
+
+.row {
+    margin: 0;
+}
+
+.webheader {
+    height: 121px;
+    margin-left:auto;
+    margin-right:auto;
+    background-image: url("../images/header_free_bg.png");
+}
+
+.btn-danger {
+    background-color: #e12026;
+}

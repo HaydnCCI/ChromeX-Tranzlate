@@ -1,0 +1,191 @@
+body {
+    width:100%;
+    height:100%;
+}
+
+div#main-outer {
+    background: #FFF;
+    border: 0px;
+}
+
+div#main-inner {
+    width: 1200px; 
+    margin: 0 auto;
+    padding:0px;
+}
+
+#historyfooter {
+    width: 1200px; 
+    height: 55px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding:0px;
+    background-image: url("../images/footer_bg.png");
+    background-repeat: no-repeat;
+}
+
+.middle {
+    text-align: center;
+}
+
+#cardText {
+    font-size: 24px;
+    line-height: 1.6;
+    /* cursor: pointer; */
+}
+
+#cardButton {
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+.btn_arrows {
+    margin-left:15px;
+    margin-right:15px;
+    display: inline-block;
+}
+
+.cards {
+    min-height: 150px;
+}
+
+/*.answers {
+    font-size: 0.8em;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #FFF;
+}*/
+
+#answer_group {
+    height: 30px;
+}
+
+#answer_correct {
+    display:none;
+    color: #007F0E;
+}
+
+#answer_wrong {
+    display:none;
+    color: #C00000;
+}
+
+div#main-heading {
+    margin-top: 25px;
+}
+
+.clickable {
+    text-decoration-line: none;
+}
+
+a{
+    text-decoration: underline;
+}
+
+.shareicons i{
+    font-size: 38px;
+}
+
+.shareicons a {
+    color:inherit;
+}
+
+.shareicon {
+    float:right;
+    margin-left:10px;
+}
+
+.shareicons {
+    margin-left:150px;
+}
+
+.shareicons::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+th#action_btn {
+    width: 40px;;
+}
+
+th#half {
+    width: 40%;
+}
+
+.table {
+    table-layout: fixed;
+}
+.table thead{
+    background-color: #E12026;
+    color: #FFF;
+}
+
+.table td, th {
+    word-wrap:break-word;
+    border:1px solid #888888;
+}
+
+.saveDiv {
+    cursor: pointer;
+    width:20px;
+    font-size: 20px;
+    float:left;
+}
+.saveDiv::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#shortanswer {
+    font-size: 24px;
+    line-height: 1.6;
+    /* cursor: pointer; */
+}
+
+#cardlist_table {
+    width: 480px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-left:1px solid grey;
+    border-bottom:1px solid grey;
+    border-right:1px solid grey;
+}
+
+#cardlist_table td{
+    border:0px;
+}
+
+#cardlist_table thead th{
+   border:0px;
+}
+
+#cardlist_table tr{
+    border-top:1px solid grey;
+}
+
+#cardlist_table tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  max-height: 380px;
+}
+
+#cardlist_table thead tr:last-child {
+   display: block;
+   width: calc(100% - 0.9em);
+}
+
+#cardlist_table th, #cardlist_table td {
+  text-align: left;
+  width: 450px;
+}
+#cardlist_table tr td:last-child{ 
+    width:50px;
+}
+#cardlist_table thead th:last-child {
+   width:50px;
+}

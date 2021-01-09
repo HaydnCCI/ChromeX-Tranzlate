@@ -1,0 +1,258 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    /** background-color: #333; */
+    overflow: hidden;
+    padding: 0 2px 0 2px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+a svg{
+    transition:all .5s ease;
+
+    &:hover{
+        #transform:rotate(180deg);
+    }
+}
+
+#ico{
+    display: none;
+}
+
+.menu{
+    background: #000;
+    display: none;
+    padding: 5px;
+    width: 320px;
+    @include border-radius(5px);
+
+    #transition: all 0.5s ease;
+
+    a{
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 10px 2px;
+        margin: 3px 0;
+        text-decoration: none;
+        background: #444;
+
+        &:nth-child(1){
+            margin-top: 0;
+            @include border-radius(3px 3px 0 0 );
+        }
+        &:nth-child(5){
+            margin-bottom: 0;
+            @include border-radius(0 0 3px 3px);
+        }
+
+        &:hover{
+            background: #555;
+        }
+    }
+}
+
+div#main-outer {
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 100%;
+    /** background: #DDD; **/
+    border-radius: 0px;
+    border: 1px solid #000;
+    background-image: url("../images/free_bg.png");
+    background-repeat: no-repeat;
+}
+
+div#main-inner {
+    transition: margin-left .5s;
+    padding: 8px;
+}
+
+div#main-heading {
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    margin-left:0px;
+    display: inline-block;
+}
+
+div#translated_to {
+    color: #C00000;
+}
+
+.clickable {
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+.big-top-margin {
+    margin-top: 100px;
+}
+
+img#main-image {
+    display: block;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#main-about-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+div#nav-title {
+    margin-top:129px;
+    height: 50px;
+/*    background: rgb(255, 255, 255);  Fallback for older browsers without RGBA-support 
+    background: rgba(255, 255, 255, 0.7);*/
+}
+
+#nav-title-icon {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+div#right-col {
+    float:right;
+    display: inline-block;
+}
+
+/* The slider 
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+.toggle.ios .toggle-handle { border-radius: 20px; }
+*/
+
+/* Dialog */
+dialog {
+    top: 10%;
+    height: 250px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+dialog h3 {
+    margin-bottom: 10px;
+}
+
+dialog #language_label {
+    font-size: 12px;
+}
+
+dialog select {
+    width: 100%;
+}
+
+dialog .action_buttons {
+    margin-top: 10px;
+    float: right;
+}
+
+dialog::backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:40px;
+   cursor: pointer;
+}
+
+.languagedropdown {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C2C2C2;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #E8E8E8 inset;
+    height: 35px;
+    width: 90%;
+}
+
+.icons {
+    width:100px;
+    border: 1px solid #D1CDCD;
+}
+
+.icons div {
+    text-align: center;
+}
+
+.highlight:after{
+    content : "\2714";
+    color : green;
+}

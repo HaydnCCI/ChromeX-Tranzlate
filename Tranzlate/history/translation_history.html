@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recent Translations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- load stylesheets: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/index.html -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap2-toggle.min.css" />
+
+        <!-- load javascript: jQuery 1.9.1 - http://jquery.com/ -->
+        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+        <!-- load javascript: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/ -->
+        <script type="text/javascript" src="../js/bootstrap2-toggle.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="../js/xlsx.full.min.js"></script>
+        <script type="text/javascript" src="../js/FileSaver.min.js"></script>
+
+        <!-- load stylesheets: internal -->
+        <link rel="stylesheet" type="text/css" href="../css/global.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/main.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/history.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <div id="main-outer">
+            <div id="main-inner">
+                <div class="webheader"></div>
+                <div class="row-fluid">
+                    <div class="span5" style="margin-top:10px;">
+                        <img src="../images/logo_normal.png" alt="logo">
+                    </div>
+                    <div class="span2">
+                        <div id="main-heading" style="color: #E12026">Recent History</div>
+                    </div>
+                    <div class="span2">
+                        <div id="main-heading">
+                            <div id="flashcards" class="clickable">
+                                Flash Cards
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3"  style="margin-top:15px;">
+                        <a href="https://chrome.google.com/webstore/detail/we-tranzlate-premium/olmbanehdhngpgkcfjmilomnnbikohbm?authuser=1" target="_blank">
+                            <img src="../images/upgrade.png" alt="upgrade">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row-fluid" style="margin-top:20px;">
+                    <h4>Limited to 10</h4>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <button id="saveAll" class="btn btn-small btn-success" type="button"><i class="far fa-save"></i> Save Selected</button>
+                        <button id="delAll" class="btn btn-small btn-danger" type="button"><i class="far fa-trash-alt"></i> Delete Selected</button>
+                        <div class="tooltipx clickable">
+                            <button id="export" class="btn btn-small btn-default" type="button" disabled style="cursor:not-allowed;"><i class="far fa-arrow-alt-circle-down"></i> Export Selected</button>
+                            <span class="tooltiptextx-right" >Available only in the Premium version</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <table id="history_table" class="table table-striped" style="margin-top:10px;">
+                            <thead>
+                                <tr>
+                                    <th id="half" style="width:20px;">No</th>
+                                    <th id="half" style="width:20px;text-align: center;"><input type="checkbox" id="selectAll"></th>
+                                    <th id="half">Terms</th>
+                                    <th id="half">Translation</th>
+                                    <th id="half"  style="width:100px;">Date</th>
+                                    <th id="action_btn">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <a href="http://www.wetranzlate.com/aboutus.php" target="_blank">FAQ</a> <br>
+                        <a href="mailto:admin@wetranzlate.com" target="_blank">Report Bug</a> <br>
+                        <a href="http://www.wetranzlate.com/privacy.php" target="_blank">Privacy Policy</a> <br>
+                        <a href="http://www.wetranzlate.com/aboutus.php" target="_blank">Contact Us</a>
+                    </div>
+                    <div class="span3 offset3" style="text-align: right;">
+                        <div class="shareicons">
+                            <div class="shareicon"><a href="#" title="Coming Soon"><i class="fab fa-twitter-square"></i></a></div>
+                            <div class="shareicon"><a href="#" title="Coming Soon"><i class="fab fa-instagram"></i></a></div>
+                            <div class="shareicon"><a href="https://facebook.com/wetranzlate" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+                        </div>
+                        <div><a href="https://paypal.me/wetranzlate" target="_blank">Love us? Donate and Support.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="historyfooter">
+
+            </div>
+        </div>
+
+        <!-- load javascript: unique html page javascript file -->
+        <script type="text/javascript" src="../js/history.js"></script>
+        <table id="export_table" style="display:none">
+            <thead>
+            <th><b>Word</b></th>
+            <th><b>Translation</b></th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
