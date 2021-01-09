@@ -15,7 +15,13 @@
         }
     ],
     "browser_action": {
-        "default_title": "Tranzlate"
+        "default_title": "Tranzlate",
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "19": "img/icon_19.png",
+            "38": "img/icon_38.png"
+         }
+         
     },
     "background": {
         "scripts": ["background.js"]
