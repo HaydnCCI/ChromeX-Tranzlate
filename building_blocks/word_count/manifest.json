@@ -1,7 +1,13 @@
 {
-    "name": "word_count", 
-    "version": "1.0", 
+    "name": "Tranzlate", 
+    "version": "1.0.1", 
     "manifest_version": 2,
+    "web_accessible_resources": ["img/logo_small.png"], 
+    "icons": {
+        "128": "img/icon_128.png",
+        "19": "img/icon_19.png",
+        "38": "img/icon_38.png"
+     },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
@@ -9,7 +15,7 @@
         }
     ],
     "browser_action": {
-        "default_title": "word_count"
+        "default_title": "Tranzlate"
     },
     "background": {
         "scripts": ["background.js"]
