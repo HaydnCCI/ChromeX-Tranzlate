@@ -1,2 +1,10 @@
 # ChromeX-Tranzlate
-A chrome extension tool to accelerate the language learning process based on scientific best language learning principles... 
+A chrome extension tool to accelerate the language learning process with scientifical principles.
+
+## Description
+
+
+## Features
+
+
+## Project Structure
