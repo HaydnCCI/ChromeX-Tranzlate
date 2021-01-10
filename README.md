@@ -1,7 +1,8 @@
 # ChromeX-Tranzlate
 A chrome extension tool to accelerate the language learning process with scientifical principles.
 
-![image](https://media.giphy.com/media/7fNXLdViGSlKo/giphy.gif | width=300)
+![image](https://media.giphy.com/media/7fNXLdViGSlKo/giphy.gif)
+<img src="https://media.giphy.com/media/7fNXLdViGSlKo/giphy.gif" width="200", height="400"/>
 
 ## Description
 Often time, we rely on writing on our papers/excel/notepad to keep track of our online translated words when learning a new language, and this can compromise our reading speed and more importantly, our reading comprehension. We can download software or apps to help, but what if ... what if we just do that by holding down a single key and drag to highlight a word/phrase/quote/paragraph and statistically view them and systematically learn them later on? 
