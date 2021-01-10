@@ -1,10 +1,14 @@
 'use strict';
 window.addEventListener("mouseup", function (event) {
 	if (event.shiftKey) {
-		
+        var selection = window.getSelection().getRangeAt(0).toString()
+        var selectionText = window.getSelection().anchorNode.textContent
+        // alert(selection)
 		chrome.runtime.sendMessage({
+            // url: window.location.href,
             action: 'selectedText',
-            value: window.getSelection().toString(),
+            value: selection,
+            // whole_sent: selectionText,
             clientX: event.clientX,
             clientY: event.clientY
         });

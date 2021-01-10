@@ -1,32 +1,32 @@
 {
-    "name": "Tranzlate", 
-    "version": "1.0.1", 
-    "manifest_version": 2,
-    "permissions": [ "tabs", "activeTab", "declarativeContent", "storage", "\u003Call_urls>" ],
-    "web_accessible_resources": ["img/logo_small.png"], 
-    "icons": {
-        "128": "img/icon_128.png",
-        "19": "img/icon_19.png",
-        "38": "img/icon_38.png"
-     },
-    "content_scripts": [
-        {
-            "css": [ "css/content.min.css" ],
-            "js": [ "js/content.js" ],
-            "matches": [ "\u003Call_urls>" ],
-            "run_at": "document_end"
-        }
-    ],
-    "browser_action": {
-        "default_title": "Tranzlate",
-        "default_popup": "popup/popup.html",
-        "default_icon": {
-            "19": "img/icon_19.png",
-            "38": "img/icon_38.png"
-         }
-         
-    },
-    "background": {
-        "scripts": ["background.js"]
-    }
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon_19.png",
+         "38": "images/icon_38.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "We Tranzlate FREE Translation Tool"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.min.css" ],
+      "js": [ "js/content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "description": "We Tranzlate FREE",
+   "homepage_url": "http://wetranzlate.com/",
+   "icons": {
+      "128": "images/icon_128.png",
+      "19": "images/icon_19.png",
+      "38": "images/icon_38.png"
+   },
+   "manifest_version": 2,
+   "name": "We Tranzlate FREE",
+   "permissions": [ "tabs", "activeTab", "declarativeContent", "storage", "\u003Call_urls>" ],
+   "version": "1.4.6",
+   "web_accessible_resources": [ "images/logo_small.png" ]
 }

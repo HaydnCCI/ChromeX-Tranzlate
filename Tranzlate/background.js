@@ -4,44 +4,67 @@ var ID = function () {
     return '_' + Math.random().toString(36).substr(2, 9);
 };
 
-function callApi(word, targetLang, clientX, clientY) {
+async function callApi(word, targetLang, clientX, clientY) {
+    // alert(word)
     var xhr = new XMLHttpRequest();
     var url = "https://translation.googleapis.com/language/translate/v2?";
     url += "q=" + word;
-    url += "&target=" + targetLang;
+    // url += "&target=" + targetLang;
+    url += "&target=zh-TW"
     url += "&key=" + "AIzaSyDvZoXuMZdOHH6oedKn0KFco_MC3L7aK2A";
-    xhr.open("GET", url, false);
-    xhr.send();
+    // Ajax translation
+    xhr.open("GET", url, true);
+    xhr.addEventListener("load", function(e) {
+        xhr.send(null);
+    }, false)
 
-    var result = xhr.responseText;
-    var responseObj = JSON.parse(result);
+    xhr.send(null);
 
-    if (responseObj.error) {
-        console.log(result);
-        alert("There seems to be a problem while translating.");
-    } else {
-        if (responseObj.data) {
-            var translations = responseObj.data.translations;
-            if (translations instanceof Array) {
-                for (var i = 0; i < translations.length; i++) {
-                    var output = translations[i].translatedText;
-                    //console.log(result);
-                    var t_id = ID();
-                    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-                        chrome.tabs.sendMessage(tabs[0].id, {
-                            text: word,
-                            translatedText: output,
-                            id: t_id,
-                            x: clientX,
-                            y: clientY
-                        });
-                    });
-                    saveTranslation(word.trim(), output.trim(), t_id);
+    xhr.onreadystatechange = function (oEvent) {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var result = xhr.responseText
+            } else {
+                alert("Error", xhr.statusText);
+                var result = []
+            }
+        }
+    
+        if (result.length > 0 ){
+            var responseObj = JSON.parse(result);
+            // alert(xhr.responseObj)
+            if (responseObj.error) {
+                console.log(result);
+                alert("There seems to be a problem while translating.");
+            } else {
+                if (responseObj.data) {
+                    var translations = responseObj.data.translations;
+                    if (translations instanceof Array) {
+                        for (var i = 0; i < translations.length; i++) {
+                            var output = translations[i].translatedText;
+                            //console.log(result);
+                            var t_id = ID();
+                            chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+                                chrome.tabs.sendMessage(tabs[0].id, {
+                                    text: word,
+                                    translatedText: output,
+                                    id: t_id,
+                                    x: clientX,
+                                    y: clientY
+                                });
+                            });
+                            saveTranslation(word.trim(), output.trim(), t_id);
+                        }
+                    }
                 }
             }
         }
+        else {
+            alert("Empty translation response.")
+        }
     }
 }
+
 
 function saveTranslation(original, translated, id) {
     chrome.storage.local.get({translationHistory: []}, function (result) {
