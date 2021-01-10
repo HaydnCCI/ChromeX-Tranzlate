@@ -1,7 +1,6 @@
 # ChromeX-Tranzlate
 A chrome extension tool to accelerate the language learning process with scientifical principles.
 
-![image](https://media.giphy.com/media/7fNXLdViGSlKo/giphy.gif)
 <img src="https://media.giphy.com/media/7fNXLdViGSlKo/giphy.gif" alt="alt text" width="250" height="250">
 
 ## Description
